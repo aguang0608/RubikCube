@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import lib.Virtual as Virtual
+import lib.Control as Control
+import lib.UserInterface as UI
+
+import time
+
+Cube = Virtual.Cube()
+Camera = Control.Camera()
+Hand = None#Control.Hand()
+
+Cube.part = {'FUR': 'white', 'RDB': 'yellow', 'FDM': 'white', 'FDL': 'white', 'DRM': 'blue', 'LUB': 'red', 'FDR': 'blue', 'FLM': 'orange', 'LUF': 'green', 'UMM': 'blue', 'FUL': 'orange', 'FUM': 'white', 'LUM': 'red', 'LDB': 'green', 'LDF': 'green', 'URM': 'yellow', 'BUR': 'yellow', 'LDM': 'blue', 'BMM': 'yellow', 'DMM': 'green', 'BUL': 'blue', 'BUM': 'red', 'LBM': 'blue', 'RMM': 'red', 'BDM': 'white', 'BDL': 'white', 'FRM': 'red', 'ULM': 'white', 'BLM': 'orange', 'DFL': 'red', 'RBM': 'green', 'FMM': 'white', 'DLM': 'yellow', 'BDR': 'orange', 'RDM': 'red', 'DBM': 'orange', 'DFR': 'orange', 'RFM': 'yellow', 'DBL': 'orange', 'DFM': 'blue', 'UFL': 'yellow', 'UFM': 'green', 'UBR': 'orange', 'RUM': 'orange', 'RUB': 'blue', 'RUF': 'red', 'LFM': 'green', 'BRM': 'yellow', 'RDF': 'white', 'LMM': 'orange', 'UBL': 'yellow', 'UBM': 'green', 'UFR': 'blue', 'DBR': 'red'}
+
+#Camera.takePicture('./tmp/1')
+U = UI.UI(Cube, Camera, Hand)
+U.run()
+
+#time.sleep(10)
+#Camera.takePicture('./tmp/1')
