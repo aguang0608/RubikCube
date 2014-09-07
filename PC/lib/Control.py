@@ -41,6 +41,7 @@ class Camera:
             self.canvas.delete(Tkinter.ALL)
             jpg = Image.open(jpgFileName)  
             #ImageAnalysis.trans(jpg)
+            ImageAnalysis.toTarget(jpg)
             (width, height) = jpg.size
             for x in range(width):
                 for y in range(height):
@@ -71,6 +72,7 @@ class Camera:
             jpg.write(chr(v))
         jpg.close()
         print 'takePicture','size = ',len(data), 'jpgFileName = ', jpgFileName
+
         self.__view(jpgFileName)
     def bindViewFrame(self, frame):
         self.canvas = Tkinter.Canvas(frame, bg="black", height=240, width=320)

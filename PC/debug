@@ -1,0 +1,31 @@
+#!/usr/bin/python
+import lib.ImageAnalysis
+import Image
+import time
+
+lsJpg = [
+    # '2014-09-07-06-38-12.jpg',
+    # '2014-09-07-06-39-36.jpg',
+    # '2014-09-07-06-44-27.jpg',
+    # '2014-09-07-06-45-43.jpg',
+    # '2014-09-07-06-47-20.jpg',
+    # '2014-09-07-06-50-43.jpg'
+    # 'blue.jpg',
+    # 'white.jpg',
+    # 'red.jpg',
+    # 'green.jpg',
+    # 'orange.jpg',
+    # 'yellow.jpg',
+    '2014-09-07-09-29-43.jpg'
+    ]
+
+print lsJpg
+
+for jpgFileName in lsJpg :
+    print jpgFileName
+    jpg = Image.open('./tmp/'+jpgFileName)
+    #lib.ImageAnalysis.getTarget(jpg)
+    #jpg.show()
+    lib.ImageAnalysis.toTarget(jpg)
+    jpg.show()
+    time.sleep(0.5)
